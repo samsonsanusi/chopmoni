@@ -1,0 +1,19 @@
+{
+  "cwd": "/Users/user/Desktop/projects/chopmoni",
+  "type": [
+    "pwa"
+  ],
+  "name": "My App",
+  "framework": "react",
+  "template": "tabs",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}
