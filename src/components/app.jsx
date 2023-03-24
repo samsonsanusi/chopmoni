@@ -140,11 +140,13 @@ const MyApp = () => {
       </Popup>
 
       <LoginScreen id='my-login-screen'>
+        <Navbar title='Login' backLink='Back'></Navbar>
         <View>
           <Page loginScreen>
             <LoginScreenTitle>Login</LoginScreenTitle>
             <List form>
               <ListInput
+                className='formInput__style'
                 type='text'
                 name='businessname'
                 placeholder='Businessname'

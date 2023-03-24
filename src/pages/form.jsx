@@ -18,26 +18,37 @@ const FormPage = () => (
       <ListInput
         type='text'
         placeholder='First Name'
+        className='formInput__style'
       ></ListInput>
 
       <ListInput
         type='text'
         placeholder='Last Name'
+        className='formInput__style'
       ></ListInput>
 
       <ListInput
         type='tel'
         placeholder='Mobile Number'
+        className='formInput__style'
       ></ListInput>
 
       <ListInput
         type='text'
         placeholder='Business/Company Name'
+        className='formInput__style'
       ></ListInput>
 
       <ListInput
+        className='formInput__style'
         type='text'
         placeholder='Business Address'
+      ></ListInput>
+
+      <ListInput
+        className='formInput__style'
+        type='password'
+        placeholder='Password'
       ></ListInput>
     </List>
     <Block strong>
@@ -47,7 +58,7 @@ const FormPage = () => (
         </Button>
       </Row>
     </Block>
-    <Block className='chopmoni__footer' color="red">
+    <Block className='chopmoni__footer' color='red'>
       <h2>Chopmoni</h2>
       <p>Terms and Privacy Policy Notice</p>
     </Block>
