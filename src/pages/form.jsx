@@ -16,31 +16,26 @@ const FormPage = () => (
 
     <List noHairlinesMd>
       <ListInput
-        label='First Name'
         type='text'
         placeholder='First Name'
       ></ListInput>
 
       <ListInput
-        label='Last Name'
         type='text'
         placeholder='Last Name'
       ></ListInput>
 
       <ListInput
-        label='Mobile Number'
         type='tel'
         placeholder='Mobile Number'
       ></ListInput>
 
       <ListInput
-        label='Business/Company Name'
         type='text'
         placeholder='Business/Company Name'
       ></ListInput>
 
       <ListInput
-        label='Business Address'
         type='text'
         placeholder='Business Address'
       ></ListInput>
