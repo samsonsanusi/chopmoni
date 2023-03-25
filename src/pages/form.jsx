@@ -32,7 +32,7 @@ const FormPage = () => (
         placeholder='Mobile Number'
         className='formInput__style'
       ></ListInput>
-
+      
       <ListInput
         type='text'
         placeholder='Business/Company Name'
