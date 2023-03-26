@@ -1,4 +1,5 @@
 import React from 'react'
+import Auth from "../js/Auth"
 import {
   Page,
   Navbar,
@@ -17,6 +18,7 @@ import {
   Button,
 } from 'framework7-react'
 
+<Auth/>
 const HomePage = () => (
   <Page name='home'>
     {/* Top Navbar */}
