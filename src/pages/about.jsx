@@ -2,8 +2,8 @@ import React from 'react';
 import { Page, Navbar, Block, BlockTitle } from 'framework7-react';
 
 const AboutPage = () => (
-  <Page>
-    <Navbar title="About" backLink="Back" />
+  <Page name='about'>
+    <Navbar title="About"/>
     <BlockTitle>About My App</BlockTitle>
     <Block strong>
       <p>Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis sint nemo consequuntur, fugiat. Eius perferendis animi autem incidunt vel quod tenetur nostrum, voluptate omnis quasi quidem illum consequuntur, a, quisquam.</p>
