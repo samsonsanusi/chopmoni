@@ -6,7 +6,7 @@ import Passwordless, {
 
 SuperTokens.init({
     appInfo: {
-        apiDomain: "http://localhost:3000",
+        apiDomain: "https://api.chopmoni.org",
         apiBasePath: "/api/v1",
         appName: "Chopmoni",
     },
@@ -34,7 +34,7 @@ export async function sendOTP(phoneNumber) {
 
         // OTP sent successfully.
         window.alert("Please check your email for an OTP");
-    } catch (error) {
+    } catch (err) {
         if (err.isSuperTokensGeneralError === true) {
             // this may be a custom error message sent from the API by you,
             // or if the input email / phone number is not valid.

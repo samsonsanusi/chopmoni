@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000/api/v1";
+const BASE_URL = 'https://api.chopmoni.org/api/v1'
 
 export async function createBusiness(data) {
     try {
@@ -47,6 +47,16 @@ export async function uploadImageToServer(data) {
     console.log(response);
     return response.data.data;
     } catch (error) {
+        console.log(error);
+    }
+}
+
+export async function registerBusinessInfo(data){
+    try{
+        let response = axios.post(`${BASE_URL}/menu/items`, data);
+        console.log(response);
+        return response.data.data;
+    }catch(error){
         console.log(error);
     }
 }

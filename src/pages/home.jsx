@@ -1,5 +1,4 @@
 import React from 'react'
-import Auth from "../js/Auth"
 import {
   Page,
   Navbar,
@@ -13,7 +12,6 @@ import {
 } from 'framework7-react'
 import { logout } from '../services/supertoken'
 
-<Auth/>
 const HomePage = () => (
   <Page name='home'>
     <Navbar>Welcome Back</Navbar>

@@ -12,3 +12,8 @@
 .formInput__style{
  margin-bottom: 2rem;
 }
+
+.inputStyle{
+ border: 1px solid black;
+ border-width: 50%;
+}

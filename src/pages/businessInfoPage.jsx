@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Page,
   Navbar,
@@ -8,34 +8,33 @@ import {
   Row,
   Button,
   Block,
-  Preloader
-} from 'framework7-react';
-import { createBusiness } from '../services/apiService';
+  Preloader,
+} from 'framework7-react'
+import { createBusiness } from '../services/apiService'
 
-const FormPage = ({ f7router }) => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [businessAddress, setBusinessAddress] = useState('');
-  const [mobileNumber, setMobileNumber] = useState('');
-  const [userEmail, setUserEmail] = useState('');
-  const [userSex, setUserSex] = useState('');
-  const [residentialAddress, setResidentialAddress] = useState('');
-  const [isLoading, setLoading] = useState('');
+const BusinessFormPage = ({ f7router }) => {
+  const [businessName, setBusinessName] = useState('')
+  const [address, setAddress] = useState('')
+  const [cac, setCac] = useState('')
+  const [mobileNumber, setMobileNumber] = useState('')
+  const [userEmail, setUserEmail] = useState('')
+  const [bank, setBank] = useState('')
+  const [accountNumber, setAccountNumber] = useState('')
+  const [isLoading, setLoading] = useState('')
 
-  async function registerBusiness() {
-    setLoading(true);
+  async function registerBusinessInfo() {
+    setLoading(true)
     await createBusiness({
-      firstName,
-      lastName,
+      businessName,
+      address, 
+      cac,
       mobileNumber,
       userEmail,
-      userSex,
-      residentialAddress,
-      businessName,
-      businessAddress,
+      bank,
+      accountNumber,
     })
-    setLoading(false);
-    f7router.navigate('/');
+    setLoading(false)
+    f7router.navigate('/')
   }
 
   return (
@@ -44,18 +43,18 @@ const FormPage = ({ f7router }) => {
       <List noHairlinesMd>
         <ListInput
           type='text'
-          placeholder='First Name'
+          placeholder='Business/Company Name'
           className='formInput__style'
-          value={firstName}
-          onInput={(e) => setFirstName(e.target.value)}
+          value={businessName}
+          onInput={(e) => setBusinessName(e.target.value)}
         ></ListInput>
 
         <ListInput
           type='text'
-          placeholder='Last Name'
+          placeholder='CAC BN/RG Number'
           className='formInput__style'
-          value={lastName}
-          onInput={(e) => setLastName(e.target.value)}
+          value={cac}
+          onInput={(e) => setCac(e.target.value)}
         ></ListInput>
 
         <ListInput
@@ -75,19 +74,19 @@ const FormPage = ({ f7router }) => {
         ></ListInput>
 
         <ListInput
-          type='sex'
-          placeholder='Sex'
+          type='text'
+          placeholder='Bank'
           className='formInput__style'
-          value={userSex}
-          onInput={(e) => setUserSex(e.target.value)}
+          value={bank}
+          onInput={(e) => setBank(e.target.value)}
         ></ListInput>
 
         <ListInput
           className='formInput__style'
-          type='text'
-          placeholder='Residential Address'
-          value={residentialAddress}
-          onInput={(e) => setResidentialAddress(e.target.value)}
+          type='number'
+          placeholder='AccountNumber'
+          value={accountNumber}
+          onInput={(e) => setAccountNumber(e.target.value)}
         ></ListInput>
       </List>
       <Block strong>
@@ -101,7 +100,7 @@ const FormPage = ({ f7router }) => {
               fill
               raised
               color='green'
-              onClick={registerBusiness}
+              onClick={registerBusinessInfo}
             >
               Update
             </Button>
@@ -112,4 +111,4 @@ const FormPage = ({ f7router }) => {
   )
 }
 
-export default FormPage;
+export default BusinessFormPage
