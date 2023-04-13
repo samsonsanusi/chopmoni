@@ -100,7 +100,7 @@ const FormPage = ({ f7router }) => {
               color='green'
               onClick={createWallet}
             >
-              Update
+              Create My Wallet
             </Button>
           )}
         </Row>
