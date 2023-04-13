@@ -59,4 +59,12 @@ export async function registerBusinessInfo(data){
     }catch(error){
         console.log(error);
     }
+}export async function createUserWallet(data){
+    try{
+        let response = axios.post(`${BASE_URL}/menu/items`, data);
+        console.log(response);
+        return response.data.data;
+    }catch(error){
+        console.log(error);
+    }
 }

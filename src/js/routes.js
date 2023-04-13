@@ -16,13 +16,13 @@ import MenuPage from '../pages/menu.jsx';
 import CreateMenuItemsPage from '../pages/createMenuItem.jsx';
 
 function authRoute(route) {
-  return async({ resolve, reject }) => {
-    if (await doesSessionExist()) {
-      resolve({ component: route })
-    } else {
-      resolve({ component: LoginPage })
-    }
-  }
+   return async({ resolve, reject }) => {
+    //  if (await doesSessionExist()) {
+    resolve({ component: route })
+    //  } else {
+      //  resolve({ component: LoginPage })
+    // }
+   }
 }
 
 var routes = [
